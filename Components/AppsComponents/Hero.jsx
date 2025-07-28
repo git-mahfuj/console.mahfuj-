@@ -87,7 +87,7 @@ const Hero = () => {
           {" "}
           Unleash Your Inner Developer
         </p>
-        <div className="w-fit mx-auto md:w-2/3 lg:w-3/4 ">
+        <div className="codeblock w-fit mx-auto md:w-2/3 lg:w-3/4 ">
           <CodeBlock
             filename="devmahfuj.Jsx"
             language="Jsx"

@@ -25,7 +25,7 @@ const Profile = () => {
     });
   }, []);
   return (
-    <section className="section text-white  h-[70vh]">
+    <section className="profile_section section text-white  h-[70vh]">
       <div className="px-[2rem] relative">
         <h1 className="text-4xl mb-3 font-medium">Hi there</h1>
         <h2 className="text-3xl mb-3 font-[400]">I'm Mahfujur Rahman</h2>

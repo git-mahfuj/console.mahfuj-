@@ -96,7 +96,7 @@ const CardsSection = () => {
           <p className="opacity-1  translate-y-10  font-medium text-xl text-thirdcolor md:text-2xl">
             With the best solutions
           </p>
-          <p className="opacity-1  translate-y-20  font-medium text-lg text-thirdcolor">
+          <p className="card_text opacity-1  translate-y-20  font-medium text-lg text-thirdcolor">
             This platform will be updated soon stay tuned !
           </p>
         </div>
