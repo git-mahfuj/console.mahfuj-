@@ -139,29 +139,17 @@
     .toggle__btns {
       font-size: .9rem !important;
     }
-    .card__container {
-      width: 400px !important;
-    }
-
-}
-@media screen and (max-width:426px) {
-   .nav__logo {
-    font-size: 1.3rem !important;
-   }
-   .codeblock {
+    .codeblock {
     width: 390px !important;
    }
-   .card_text {
-    font-size: 0.6rem !important;
+    .newsletter {
+    font-size: .7rem !important;
    }
-   .profile_section {
-    height: 80vh !important;
-   }
-   .newsletter {
-    transform: translateX(2rem) !important;
-   }
+
 }
+   
 }
+
 
 .screen-max-width {
   margin-inline-start: auto;
