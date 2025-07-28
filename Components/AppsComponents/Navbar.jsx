@@ -17,7 +17,6 @@ import {
   Github,
 } from "lucide-react";
 
-import ShadcnNav from "../imported/ShadcnNav";
 import { useGSAP } from "@gsap/react";
 import { useRouter } from "next/navigation";
 import Link from "next/link";
@@ -57,7 +56,6 @@ const Navbar = () => {
         <div className="cursor-pointer nav__logo text-primary text-3xl font-medium -translate-x-10 opacity-0 ">{` $ { console.mahfuj()
  } `}</div>
         <div className="shadcn__nav hidden lg:flex ">
-          <ShadcnNav />
         </div>
         <div className="toggle__btns flex items-center gap-6 opacity-0 translate-x-10">
           <div className="search__btn text-text flex items-center gap-2">
