@@ -33,7 +33,7 @@
   --color-primary-foreground: var(--primary-foreground);
   --color-primary: var(--primary);
   --color-secondary: var(--secondary);
-  --color-thirdcolor:var(--thirdcolor);
+  --color-thirdcolor: var(--thirdcolor);
   --color-fourthcolor: var(--fourthcolor);
   --color-popover-foreground: var(--popover-foreground);
   --color-popover: var(--popover);
@@ -43,7 +43,7 @@
   --radius-md: calc(var(--radius) - 2px);
   --radius-lg: var(--radius);
   --radius-xl: calc(var(--radius) + 4px);
-  --color-text:var(--text-color)
+  --color-text: var(--text-color);
 }
 
 :root {
@@ -54,11 +54,11 @@
   --card-foreground: oklch(0.141 0.005 285.823);
   --popover: oklch(1 0 0);
   --popover-foreground: oklch(0.141 0.005 285.823);
-  --primary: #CF0F47;
-  --secondary: #FF0B55;
-  --thirdcolor:#7F8C8D;
-  --fourthcolor:#18191A;
-  --text-color : #7A7A73;
+  --primary: #cf0f47;
+  --secondary: #ff0b55;
+  --thirdcolor: #7f8c8d;
+  --fourthcolor: #18191a;
+  --text-color: #7a7a73;
   --primary-foreground: oklch(0.985 0 0);
   --secondary-foreground: oklch(0.21 0.006 285.885);
   --muted: oklch(0.967 0.001 286.375);
@@ -85,7 +85,7 @@
 }
 
 .dark {
-  --text-color : #ECF0F1;
+  --text-color: #ecf0f1;
   --background: oklch(0.141 0.005 285.823);
   --foreground: oklch(0.985 0 0);
   --card: oklch(0.21 0.006 285.885);
@@ -124,32 +124,50 @@
     @apply border-border outline-ring/50;
   }
   body {
-    @apply bg-black  text-foreground ;
+    @apply bg-black  text-foreground;
   }
 
-  @media  screen and (min-width : 334px ) {
+  @media screen and (max-width: 454px) {
     .nav__logo {
-      font-size: 1.3rem !important;  /* equivalent to text-2xl */
-    
-  }
-  .hero__btn {
-      font-size : .7rem !important;
-      font-weight: 500 !important;
+      font-size: 1.4rem !important;
     }
-    .toggle__btns {
+  }
+  @media screen and (max-width: 381px) {
+    .nav__logo {
+      font-size: 1.3rem !important;
+    }
+    .hero__btn {
+      font-size: 0.9rem !important;
+    }
+    .codeblock {
+      width: 350px !important;
+    }
+  }
+  @media screen and (max-width: 366px) {
+    .nav__logo {
+      font-size: 1rem !important;
+    }
+    .hero__btn {
+      font-size: 0.8rem !important;
+    }
+    .hero__heading {
+      font-size: 2.6rem !important;
+    }
+    .hero__subheading {
       font-size: .9rem !important;
     }
     .codeblock {
-    width: 390px !important;
-   }
-    .newsletter {
-    font-size: .7rem !important;
-   }
-
+      width: 320px !important;
+    }
+  }
+  @media screen and(min-width : 1870px) {
+    .hero__section {
+      max-width: 1700px !important;
+      width: 100% !important;
+      margin: auto !important;
+    }
+  }
 }
-   
-}
-
 
 .screen-max-width {
   margin-inline-start: auto;

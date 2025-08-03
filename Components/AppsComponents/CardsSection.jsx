@@ -45,6 +45,41 @@ const CardsSection = () => {
         scrub: true,
       },
     });
+    gsap.to("#second-data-one", {
+      x: 0,
+      duration: 1.5,
+      opacity: 1,
+      scrollTrigger: {
+        trigger: "#second-data-one",
+        start: "top 80%",
+        end: "bottom center",
+        scrub: true,
+      },
+    });
+    gsap.to("#second-data-two", {
+      x: 0,
+      duration: 1.7,
+      opacity: 1,
+      delay: 1.5,
+      scrollTrigger: {
+        trigger: "#second-data-one",
+        start: "top 80%",
+        end: "bottom center",
+        scrub: true,
+      },
+    });
+    gsap.to("#second-data-three", {
+      x: 0,
+      duration: 1.9,
+      opacity: 1,
+      delay: 1.6,
+      scrollTrigger: {
+        trigger: "#second-data-one",
+        start: "top 80%",
+        end: "bottom center",
+        scrub: true,
+      },
+    });
     gsap.to("#heading", {
       opacity: 1,
       duration: 1.5,
@@ -59,7 +94,7 @@ const CardsSection = () => {
     });
   }, []);
   return (
-    <section className="section cards__section text-white w-full h-auto">
+    <section className="section cards__section text-white w-full h-auto ">
       <div className="relative ">
         <h1
           id="heading"
@@ -88,15 +123,23 @@ const CardsSection = () => {
           </p>
         </div>
         {/* second  */}
-
-        <div className="hidden md:flex md:flex-col  translate-y-28 px-6">
-          <p className="opacity-1  text-2xl w-3/4 tracking-wide font-medium md:text-3xl">
+        <div className="hidden md:block  translate-y-28 px-6 ">
+          <p
+            id="second-data-one"
+            className="opacity-0 -translate-x-10 text-2xl w-3/4 tracking-wide font-medium"
+          >
             Get the best code snippets for your project
           </p>
-          <p className="opacity-1  translate-y-10  font-medium text-xl text-thirdcolor md:text-2xl">
+          <p
+            id="second-data-two"
+            className="opacity-0  -translate-x-10 translate-y-10 right-7 absolute font-medium text-xl text-thirdcolor md:left-6"
+          >
             With the best solutions
           </p>
-          <p className="card_text opacity-1  translate-y-20  font-medium text-lg text-thirdcolor">
+          <p
+            id="second-data-three"
+            className="opacity-0 -translate-x-10 translate-y-30  font-medium text-lg text-thirdcolor "
+          >
             This platform will be updated soon stay tuned !
           </p>
         </div>

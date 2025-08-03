@@ -25,7 +25,7 @@ const Profile = () => {
     });
   }, []);
   return (
-    <section className="profile_section section text-white  h-[70vh]">
+    <section className="profile_section section text-white w-full ">
       <div className="px-[2rem] relative">
         <h1 className="text-4xl mb-3 font-medium">Hi there</h1>
         <h2 className="text-3xl mb-3 font-[400]">I'm Mahfujur Rahman</h2>
@@ -47,14 +47,13 @@ const Profile = () => {
           </span>
           <span
             id="hehe"
-            className="absolute opacity-0 right-5 font-medium translate-y-10 md:text-4xl"
-          >
+            className="absolute opacity-0 right-5 font-medium translate-y-10 md:text-4xl lg:-translate-x-20 "         >
             Hehe!
           </span>
         </div>
         <div className="mt-12">
           <p className="text-4xl font-medium pt-5">Why i made this ??? </p>
-          <p className="text-lg font-[300] mt-5 w-3/4">
+          <p className="text-lg font-[300] mt-5 w-3/4 sm:pb-2 ">
             Umm This is my simple portfolio with some basic info about me. My
             purpose is to make this website a better place for the beginners
             because i am also a beginner. Here you can learn the basic things
