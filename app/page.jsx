@@ -1,11 +1,11 @@
 "use client"
 
-import Navbar from "@/Components/AppsComponents/Navbar";
-import Hero from "@/Components/AppsComponents/Hero";
+import Navbar from "@/Components/AppComponents/Navbar";
+import Hero from "@/Components/AppComponents/Hero";
 import Cards from "@/Components/imported/Cards";
-import CardsSection from "@/Components/AppsComponents/CardsSection";
-import Profile from "@/Components/AppsComponents/Profile";
-import Footer from "@/Components/AppsComponents/Footer";
+import CardsSection from "@/Components/AppComponents/CardsSection";
+import Profile from "@/Components/AppComponents/Profile";
+import Footer from "@/Components/AppComponents/Footer";
 
 export default function Home() {
   return (

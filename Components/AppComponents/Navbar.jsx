@@ -18,6 +18,7 @@ import {
 } from "lucide-react";
 
 import { useGSAP } from "@gsap/react";
+import NavigationMenuDemo from "@/Components/AppComponents/example-navigation-menu";
 import { useRouter } from "next/navigation";
 import Link from "next/link";
 
@@ -32,6 +33,11 @@ const Navbar = () => {
   useGSAP(() => {
     gsap.to(".nav__logo", { x: 0, duration: 0.5, opacity: 1 });
     gsap.to(".toggle__btns", { x: 0, duration: 0.5, opacity: 1 });
+    gsap.to("#nav__bar", {
+      y: 0,
+      duration: 0.5,
+      opacity: 1,
+    });
   }, []);
 
   const [isClicked, setIsClicked] = useState(false);
@@ -44,18 +50,22 @@ const Navbar = () => {
     setIsClicked((prev) => !prev);
   };
 
-  const router = useRouter()
+  const router = useRouter();
 
   const tutorialsSection = () => {
     router.push("/tutorials");
-  }
+  };
 
   return (
     <header className="text-white w-full h-18 bg-fourth fixed z-50 bg-black top-0 border-b border-[#18191A]">
       <nav className="flex justify-between items-center p-5 w-full  ">
         <div className="cursor-pointer nav__logo text-primary text-3xl font-medium -translate-x-10 opacity-0 ">{` $ { console.mahfuj()
  } `}</div>
-        <div className="shadcn__nav hidden lg:flex ">
+        <div
+          id="nav__bar"
+          className="shadcn__nav hidden lg:flex lg:-translate-y-10 lg:opacity-0"
+        >
+          <NavigationMenuDemo />
         </div>
         <div className="toggle__btns flex items-center gap-6 opacity-0 translate-x-10">
           <div className="search__btn text-text flex items-center gap-2">
@@ -203,7 +213,10 @@ const Navbar = () => {
 
         <div className="icons-social mt-12">
           <div className="social__container flex flex-col gap-4 translate-x-3">
-            <Link href="https://github.com/git-mahfuj"  className="social__data flex items-center gap-3">
+            <Link
+              href="https://github.com/git-mahfuj"
+              className="social__data flex items-center gap-3"
+            >
               <div className="icon p-3 bg-[#18191A] text-primary rounded-xl">
                 <Github />
               </div>
@@ -212,7 +225,10 @@ const Navbar = () => {
                 <p className="text-text text-[.8rem]">Lorem ipsum</p>
               </div>
             </Link>
-            <Link href="https://www.facebook.com/mahfujur.rahman.949195"  className="social__data flex items-center gap-3">
+            <Link
+              href="https://www.facebook.com/mahfujur.rahman.949195"
+              className="social__data flex items-center gap-3"
+            >
               <div className="icon p-3 bg-[#18191A] text-primary rounded-xl">
                 <Facebook />
               </div>
@@ -221,7 +237,10 @@ const Navbar = () => {
                 <p className="text-text text-[.8rem]">Lorem ipsum</p>
               </div>
             </Link>
-            <Link href="https://www.instagram.com/gorib_mahfuj/?hl=en"  className="social__data flex items-center gap-3">
+            <Link
+              href="https://www.instagram.com/gorib_mahfuj/?hl=en"
+              className="social__data flex items-center gap-3"
+            >
               <div className="icon p-3 bg-[#18191A] text-primary rounded-xl">
                 <Instagram />
               </div>

@@ -4,6 +4,7 @@ import { ChevronRight } from "lucide-react";
 import { CodeBlock } from "../imported/Codeblock";
 import gsap from "gsap";
 import { useGSAP } from "@gsap/react";
+import { useRouter } from "next/navigation";
 
 const Hero = () => {
 
@@ -42,6 +43,10 @@ const Hero = () => {
       delay: 0.5,
     });
   }, []);
+  const router = useRouter();
+  const tutorialsSection = () => {
+    router.push("/tutorials");
+  }
   return (
     <section className="section hero__section px-3 mt-16 overflow-hidden w-full 2xl:flex 2xl:justify-between 2xl:items-center 2xl:h-screen 2xl:mt-0 2xl:w-[1700px] ">
       <div className="text-white  w-full flex flex-col justify-center items-center gap-3 2xl:flex 2xl:flex-col 2xl:justify-baseline 2xl:text-start">
@@ -70,7 +75,7 @@ const Hero = () => {
           <button className="hero__btn px-6 py-2 bg-secondary text-white rounded-lg font-medium  cursor-pointer 2xl:px-8 2xl:py-3.5 2xl:text-xl">
             Get started
           </button>
-          <button className="hero__btn px-6 py-2 bg-transparent font-medium flex items-center cursor-pointer 2xl:px-8 2xl:py-3.5 2xl:text-xl">
+          <button onClick={tutorialsSection} className="hero__btn px-6 py-2 bg-transparent font-medium flex items-center cursor-pointer 2xl:px-8 2xl:py-3.5 2xl:text-xl">
             Dive into Dev Lessons{" "}
             <span className="text-secondary">
               <ChevronRight />
